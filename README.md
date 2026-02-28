@@ -1,6 +1,6 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-[![Pi-hole Generation](https://github.com/madnesscc/adguard-allowlist-cloudgaming/actions/workflows/generate_pihole_cloud.yml/badge.svg)](https://github.com/madnesscc/adguard-allowlist-cloudgaming/actions/workflows/generate_pihole_cloud.yml)
+![Pi-hole Generation](https://github.com/madnesscc/adguard-allowlist-cloudgaming/actions/workflows/generate_pihole_cloud.yml/badge.svg)
 
 # 🎮 AdGuard Whitelist for Cloud Gaming
 
