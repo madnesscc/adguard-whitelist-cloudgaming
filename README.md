@@ -4,6 +4,20 @@
 
 Optimize your Cloud Gaming experience (Amazon Luna, Xbox Cloud Gaming, NVIDIA GeForce Now) while using AdGuard, uBlock Origin, or other adblockers.
 
+# Cloudgaming Allowlist
+![Pi-hole Generation](https://github.com/madnesscc/adguard-allowlist-cloudgaming/actions/workflows/generate_pihole_cloud.yml/badge.svg)
+
+This list ensures that cloud gaming services like GeForce Now, Xbox Cloud, and Luna run smoothly without being blocked by DNS filters.
+
+### 📥 Download & Installation
+
+| Platform | Filter Type | Link |
+| :--- | :--- | :--- |
+| **AdGuard / uBlock** | Standard (Allowlist) | [adguard-allowlist-cloudgaming](./adguard-allowlist-cloudgaming) |
+| **Pi-hole / DNS** | Clean Domains | [pihole-cloudgaming.txt](./pihole-cloudgaming.txt) |
+
+> **Status:** The Pi-hole version is automatically generated and updated on every change.
+
 ## ❓ Why do you need this list?
 Aggressive adblocking filters and privacy settings can sometimes accidentally block essential STUN servers and WebRTC connections. If your adblocker interferes with these domains, you might experience:
 - Infinite loading screens or failed handshakes
