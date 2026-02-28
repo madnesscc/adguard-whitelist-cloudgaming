@@ -1,9 +1,9 @@
-name: Pihole-Cloud-Generator
+name: generate_pihole_cloud
 
 on:
   push:
     paths:
-      - 'adguard-allowlist-cloudgaming'
+      - 'adguard-whitelist-cloudgaming'
   workflow_dispatch:
 
 jobs:
@@ -15,12 +15,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Convert Cloud-Whitelist to Pi-hole
+      - name: Convert Whitelist to Pi-hole
         run: |
-          if [ -f "adguard-allowlist-cloudgaming" ]; then
-            sed -e 's/@@||//g' -e 's/\^//g' -e 's/\$important//g' -e '/^!/d' -e '/^#/d' -e '/^$/d' "adguard-allowlist-cloudgaming" > pihole-cloudgaming.txt
+          if [ -f "adguard-whitelist-cloudgaming" ]; then
+            sed -e 's/@@||//g' -e 's/\^//g' -e 's/\$important//g' -e '/^!/d' -e '/^#/d' -e '/^$/d' "adguard-whitelist-cloudgaming" > pihole-cloudgaming.txt
+            echo "✅ Conversion successful"
           else
-            echo "File not found"
+            echo "❌ Error: File 'adguard-whitelist-cloudgaming' not found!"
             exit 1
           fi
           
@@ -29,5 +30,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add pihole-cloudgaming.txt
-          git commit -m "Update Pi-hole list" || echo "No changes"
+          git commit -m "Update Pi-hole list [auto]" || echo "No changes to commit"
           git push
