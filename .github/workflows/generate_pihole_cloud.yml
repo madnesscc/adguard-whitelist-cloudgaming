@@ -1,4 +1,4 @@
-name: ☁️ Generate Pi-hole Cloudgaming Whitelist
+name: Generate Pi-hole Cloudgaming Whitelist
 
 on:
   push:
