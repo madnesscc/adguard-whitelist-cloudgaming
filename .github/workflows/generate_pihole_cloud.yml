@@ -1,4 +1,4 @@
-name: generate_pihole_cloud
+name: Pihole-Cloud-Generator
 
 on:
   push:
