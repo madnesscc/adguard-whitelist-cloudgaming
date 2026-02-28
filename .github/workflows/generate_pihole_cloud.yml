@@ -1,0 +1,35 @@
+name: ☁️ Generate Pi-hole Cloudgaming Whitelist
+
+on:
+  push:
+    paths:
+      - 'adguard-allowlist-cloudgaming' # Exakter Dateiname ohne Endung
+  workflow_dispatch:
+
+jobs:
+  convert-cloud:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Convert Cloud-Whitelist to Pi-hole
+        run: |
+          # Prüft, ob die Datei existiert und wandelt sie für Pi-hole um
+          if [ -f "adguard-allowlist-cloudgaming" ]; then
+            sed -e 's/@@||//g' -e 's/\^//g' -e 's/\$important//g' -e '/^!/d' -e '/^#/d' -e '/^$/d' "adguard-allowlist-cloudgaming" > pihole-cloudgaming.txt
+            echo "✅ Cloudgaming list converted successfully."
+          else
+            echo "❌ File 'adguard-allowlist-cloudgaming' not found!"
+            exit 1
+          fi
+          
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add pihole-cloudgaming.txt
+          git commit -m "Update Pi-hole cloudgaming list [auto]" || echo "No changes to commit"
+          git push
