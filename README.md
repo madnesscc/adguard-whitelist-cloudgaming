@@ -30,3 +30,5 @@ This whitelist uses the `$important` modifier to ensure that crucial infrastruct
 ## 💡 Extra Tips for Best Performance
 - **Disable "Block WebRTC":** If you are using AdGuard's Stealth Mode or Tracking Protection in your browser, make sure the option to block WebRTC is **disabled**. Cloud gaming heavily relies on WebRTC.
 - **Use a fast DNS:** For the best gaming experience, consider using a fast upstream DNS server like Cloudflare (`1.1.1.1`) or Google (`8.8.8.8`).
+---
+**Disclaimer:** This project is not affiliated with Amazon, NVIDIA, Microsoft, Google, or any other cloud gaming provider. All product names, logos, and brands are property of their respective owners. This list is maintained by **madnesscc** for community use under the MIT License.
