@@ -1,0 +1,38 @@
+# Name: Cloud Gaming & STUN Whitelist
+# Description: Prevents AdGuard from blocking essential connections for Amazon Luna, GeForce Now, and Xbox Cloud Gaming.
+# Version: 1.0.0
+# Author: madnesscc
+# License: MIT
+# Last modified: 2026-02-28
+# --------------------------------------------------
+# --- [START] Ultimate Cloud Gaming & STUN Whitelist ---
+
+# 1. STUN Servers (Essential WebRTC handshake for all services)
+@@||stun.l.google.com^$important
+@@||stun1.l.google.com^$important
+@@||stun2.l.google.com^$important
+@@||stun3.l.google.com^$important
+@@||stun4.l.google.com^$important
+@@||stun.services.mozilla.com^$important
+@@||stunserver.org^$important
+
+# 2. Amazon Luna
+@@||luna.amazon.com^$important
+@@||amazonluna.com^$important
+@@||amazongames.com^$important
+
+# 3. NVIDIA GeForce Now
+@@||nvidia.com^$important
+@@||geforcenow.com^$important
+@@||nvidiagrid.net^$important
+@@||gfn.nvidia.com^$important
+@@||stun.nvidiagrid.net^$important
+
+# 4. Xbox Cloud Gaming / Game Pass
+@@||xbox.com^$important
+@@||xboxlive.com^$important
+@@||gamepass.com^$important
+@@||playfabapi.com^$important
+@@||tlu.dl.delivery.mp.microsoft.com^$important
+
+# --- [END] ---
