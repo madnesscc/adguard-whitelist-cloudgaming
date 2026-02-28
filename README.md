@@ -10,11 +10,17 @@ Optimize your Cloud Gaming experience (Amazon Luna, Xbox Cloud Gaming, NVIDIA Ge
 
 This list ensures that cloud gaming services like GeForce Now, Xbox Cloud, and Luna run smoothly without being blocked by DNS filters.
 
+# 🎮 AdGuard Whitelist for Cloud Gaming
+
+[![Pi-hole Generation](https://github.com/madnesscc/adguard-whitelist-cloudgaming/actions/workflows/generate_pihole_cloud.yml/badge.svg)](https://github.com/madnesscc/adguard-whitelist-cloudgaming/actions)
+
+Optimize your Cloud Gaming experience (Amazon Luna, Xbox Cloud Gaming, NVIDIA GeForce Now) while using AdGuard, uBlock Origin, or other adblockers.
+
 ### 📥 Download & Installation
 
 | Platform | Filter Type | Link |
 | :--- | :--- | :--- |
-| **AdGuard / uBlock** | Standard (Allowlist) | [adguard-allowlist-cloudgaming](./adguard-allowlist-cloudgaming) |
+| **AdGuard / uBlock** | Standard (Whitelist) | [adguard-whitelist-cloudgaming](./adguard-whitelist-cloudgaming) |
 | **Pi-hole / DNS** | Clean Domains | [pihole-cloudgaming.txt](./pihole-cloudgaming.txt) |
 
 > **Status:** The Pi-hole version is automatically generated and updated on every change.
