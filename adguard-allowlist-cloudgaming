@@ -1,9 +1,10 @@
 # Name: Cloud Gaming & STUN Whitelist
-# Description: Prevents AdGuard from blocking essential connections for Amazon Luna, GeForce Now, and Xbox Cloud Gaming.
-# Version: 1.0.0
-# Author: madnesscc
+# Description: Prevents AdGuard from blocking essential connections for
+#              Amazon Luna, GeForce Now, and Xbox Cloud Gaming.
+# Version: 2.0.0
+# Author: madnesscc (extended)
 # License: MIT
-# Last modified: 2026-02-28
+# Last modified: 2026-03-15
 # --------------------------------------------------
 # --- [START] Ultimate Cloud Gaming & STUN Whitelist ---
 
@@ -20,6 +21,9 @@
 @@||luna.amazon.com^$important
 @@||amazonluna.com^$important
 @@||amazongames.com^$important
+@@||amazon.com^$important
+@@||cloudfront.net^$important
+@@||ssl-images-amazon.com^$important
 
 # 3. NVIDIA GeForce Now
 @@||nvidia.com^$important
@@ -27,6 +31,13 @@
 @@||nvidiagrid.net^$important
 @@||gfn.nvidia.com^$important
 @@||stun.nvidiagrid.net^$important
+# NEU: Login, Streaming-Infra, Netzwerktest
+@@||gfwsl.geforce.com^$important
+@@||gfe.nvidia.com^$important
+@@||networktest.geforce.com^$important
+@@||login.nvgs.nvidia.com^$important
+@@||ls.dtrace.nvidia.com^$important
+@@||events.gfe.nvidia.com^$important
 
 # 4. Xbox Cloud Gaming / Game Pass
 @@||xbox.com^$important
@@ -34,6 +45,18 @@
 @@||gamepass.com^$important
 @@||playfabapi.com^$important
 @@||tlu.dl.delivery.mp.microsoft.com^$important
+# NEU: Auth & Xbox-Live-Kerndienste
+@@||xsts.auth.xboxlive.com^$important
+@@||title.auth.xboxlive.com^$important
+@@||title.mgt.xboxlive.com^$important
+@@||xkms.xboxlive.com^$important
+@@||xflight.xboxlive.com^$important
+@@||catalog.gamepass.com^$important
+@@||accounts.xboxlive.com^$important
+@@||licensing.xboxlive.com^$important
+@@||notify.xboxlive.com^$important
+@@||microsoft.com^$important
+@@||live.com^$important
 
 # 5. Boosteroid
 @@||boosteroid.com^$important
@@ -46,5 +69,7 @@
 # 7. PlayStation Plus / Sony
 @@||playstation.com^$important
 @@||playstation.net^$important
+@@||sonyentertainmentnetwork.com^$important
+@@||dl.playstation.net^$important
 
 # --- [END] ---
