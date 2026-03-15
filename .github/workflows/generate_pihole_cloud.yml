@@ -3,7 +3,7 @@ name: generate_pihole_cloud
 on:
   push:
     paths:
-      - 'adguard-whitelist-cloudgaming'
+      - 'adguard-allowlist-cloudgaming'    # ← geändert
   workflow_dispatch:
 
 jobs:
@@ -17,11 +17,11 @@ jobs:
 
       - name: Convert Whitelist to Pi-hole
         run: |
-          if [ -f "adguard-whitelist-cloudgaming" ]; then
-            sed -e 's/@@||//g' -e 's/\^//g' -e 's/\$important//g' -e '/^!/d' -e '/^#/d' -e '/^$/d' "adguard-whitelist-cloudgaming" > pihole-cloudgaming.txt
+          if [ -f "adguard-allowlist-cloudgaming" ]; then    # ← geändert
+            sed -e 's/@@||//g' -e 's/\^//g' -e 's/\$important//g' -e '/^!/d' -e '/^#/d' -e '/^$/d' "adguard-allowlist-cloudgaming" > pihole-cloudgaming.txt    # ← geändert
             echo "✅ Conversion successful"
           else
-            echo "❌ Error: File 'adguard-whitelist-cloudgaming' not found!"
+            echo "❌ Error: File 'adguard-allowlist-cloudgaming' not found!"    # ← geändert
             exit 1
           fi
           
