@@ -46,3 +46,9 @@ playstation.com
 playstation.net
 sonyentertainmentnetwork.com
 dl.playstation.net
+windowsupdate.com
+delivery.mp.microsoft.com
+assets1.xboxlive.com.edgesuite.net
+msedge.net
+mp.microsoft.com
+dl.delivery.mp.microsoft.com
